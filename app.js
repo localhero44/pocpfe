@@ -5,7 +5,7 @@ var express   = require('express');
 var app    = express();
 var db;
 
-/*var config = {
+var config = {
       "USER"    : "",           
       "PASS"    : "",
       "HOST"    : "ec2-52-29-11-105.eu-central-1.compute.amazonaws.com",  
@@ -36,7 +36,13 @@ mongoose.connection.once('open', function() {
     } 
   }); 
 });
-*/
+
+app.get('/testdb', function(req, res) {
+  Greeting.findOne(function (err, greeting) {
+    res.send(greeting.sentence);
+  });
+});
+
 app.get('/', function(req, res) {
 //  Greeting.findOne(function (err, greeting) {
 //    res.send(greeting.sentence);
