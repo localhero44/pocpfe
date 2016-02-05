@@ -44,10 +44,10 @@ app.get('/testdb', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-//  Greeting.findOne(function (err, greeting) {
-//    res.send(greeting.sentence);
-//  });
-    res.send(200, "Hello world !");
+  Greeting.findOne(function (err, greeting) {
+    res.send(greeting.sentence);
+  });
+//    res.send(200, "Hello world !");
 });
 
 app.use(function(err, req, res, next){
@@ -60,5 +60,5 @@ app.use(function(err, req, res, next){
 });
 
 console.log('starting the Express (NodeJS) Web server');
-app.listen(80);
-console.log('Webserver is listening on port 80');
+app.listen(8080);
+console.log('Webserver is listening on port 8080');
