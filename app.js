@@ -8,7 +8,7 @@ var db;
 var config = {
       "USER"    : "",           
       "PASS"    : "",
-      "HOST"    : "ec2-54-183-166-5.us-west-1.compute.amazonaws.com",  
+      "HOST"    : "/opt/bitnami/mongodb/tmp/mongodb-27017.sock",  
       "PORT"    : "27017", 
       "DATABASE" : "test"
     };
